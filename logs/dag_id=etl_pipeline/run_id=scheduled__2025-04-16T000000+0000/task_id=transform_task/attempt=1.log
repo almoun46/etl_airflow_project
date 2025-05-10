@@ -1,0 +1,20 @@
+[2025-04-17T20:58:48.698+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-17T20:58:48.732+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_pipeline.transform_task scheduled__2025-04-16T00:00:00+00:00 [queued]>
+[2025-04-17T20:58:48.754+0000] {taskinstance.py:2614} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_pipeline.transform_task scheduled__2025-04-16T00:00:00+00:00 [queued]>
+[2025-04-17T20:58:48.763+0000] {taskinstance.py:2867} INFO - Starting attempt 1 of 4
+[2025-04-17T20:58:48.794+0000] {taskinstance.py:2890} INFO - Executing <Task(PythonOperator): transform_task> on 2025-04-16 00:00:00+00:00
+[2025-04-17T20:58:48.805+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_pipeline', 'transform_task', 'scheduled__2025-04-16T00:00:00+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/etl_pipeline.py', '--cfg-path', '/tmp/tmpnn78gm0l']
+[2025-04-17T20:58:48.807+0000] {standard_task_runner.py:105} INFO - Job 91: Subtask transform_task
+[2025-04-17T20:58:48.810+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=173) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-17T20:58:48.811+0000] {standard_task_runner.py:72} INFO - Started process 174 to run task
+[2025-04-17T20:58:48.881+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_pipeline.transform_task scheduled__2025-04-16T00:00:00+00:00 [running]> on host e5bea2914fd7
+[2025-04-17T20:58:49.003+0000] {taskinstance.py:3134} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_pipeline' AIRFLOW_CTX_TASK_ID='transform_task' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-16T00:00:00+00:00'
+[2025-04-17T20:58:49.004+0000] {taskinstance.py:732} INFO - ::endgroup::
+[2025-04-17T20:58:49.046+0000] {etl_pipeline.py:32} INFO - Données brutes : {'time': ['2025-04-17', '2025-04-18', '2025-04-19', '2025-04-20', '2025-04-21', '2025-04-22', '2025-04-23'], 'temperature_2m_min': [7.8, 6.7, 9.2, 12.6, 9.6, 10.6, 10.1], 'temperature_2m_max': [16.3, 17.7, 19.3, 19.2, 18.4, 18.5, 13.7], 'weather_code': [3, 3, 61, 80, 80, 3, 80], 'precipitation_sum': [0.0, 0.0, 2.2, 0.6, 0.9, 0.3, 10.8]}
+[2025-04-17T20:58:49.047+0000] {etl_pipeline.py:39} INFO - Données transformées : [('2025-04-17', 7.8, 16.3, 0.0, 3), ('2025-04-18', 6.7, 17.7, 0.0, 3), ('2025-04-19', 9.2, 19.3, 2.2, 61), ('2025-04-20', 12.6, 19.2, 0.6, 80), ('2025-04-21', 9.6, 18.4, 0.9, 80), ('2025-04-22', 10.6, 18.5, 0.3, 3), ('2025-04-23', 10.1, 13.7, 10.8, 80)]
+[2025-04-17T20:58:49.048+0000] {python.py:240} INFO - Done. Returned value was: [('2025-04-17', 7.8, 16.3, 0.0, 3), ('2025-04-18', 6.7, 17.7, 0.0, 3), ('2025-04-19', 9.2, 19.3, 2.2, 61), ('2025-04-20', 12.6, 19.2, 0.6, 80), ('2025-04-21', 9.6, 18.4, 0.9, 80), ('2025-04-22', 10.6, 18.5, 0.3, 3), ('2025-04-23', 10.1, 13.7, 10.8, 80)]
+[2025-04-17T20:58:49.079+0000] {taskinstance.py:341} INFO - ::group::Post task execution logs
+[2025-04-17T20:58:49.080+0000] {taskinstance.py:353} INFO - Marking task as SUCCESS. dag_id=etl_pipeline, task_id=transform_task, run_id=scheduled__2025-04-16T00:00:00+00:00, execution_date=20250416T000000, start_date=20250417T205848, end_date=20250417T205849
+[2025-04-17T20:58:49.148+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-17T20:58:49.185+0000] {taskinstance.py:3901} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-17T20:58:49.187+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
