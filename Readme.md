@@ -63,8 +63,8 @@ Voici une vue d'ensemble du pipeline de données météo automatisé :
 ### 1. Cloner le dépôt
 
 ```bash
-git clone <URL_GITHUB>
-cd project
+git clone https://github.com/almoun46/etl_airflow_project.git
+cd etl_airflow_project
 ```
 
 ### 2. Lancer l'environnement avec Docker Compose
