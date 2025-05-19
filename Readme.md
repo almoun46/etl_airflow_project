@@ -105,7 +105,8 @@ Le Dashboard Streamlit affiche :
 
 ## 📌 Exemples de visuels
 
-*Capture d'écran du dashboard Streamlit(./visuel_temp.png) .*
+*Capture d'écran du dashboard Streamlit
+![capture du dashboard]((./visuel_temp.png) .*
 
 ---
 
